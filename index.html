@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+	
+	<head>
+    	<title>Obras España</title>
+    	<script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+    	<meta name="viewport" content="initial-scale=1.0" />
+    	<meta charset="utf-8" />
+    	<link href="style.css" rel="stylesheet" />
+			<link rel="icon" type="image/jpg" href="icono-edificio.png">
+ 	 </head>
+
+  	<body onload="inicio();">
+		<div id="map"></div>
+		<div class="legend" style="left: 0;" id="info">
+			<fieldset>
+				<button type="button" class="myButton" onclick=oculta()>X</button>
+				<button type="button" class="myButton" onclick=dondeEstoy()>¿Dónde estoy?</button>
+			</fieldset>
+
+			<fieldset>
+				<legend>Número de Viviendas:</legend>
+				<table>
+					<tr>
+						<td><label for="inViviendasDesde"> Desde: </label></td>
+						<td><input type="number" id="inViviendasDesde" min="10" max="50000" value="10" step="10" onchange="buscar()" oninput="buscar()"></td>
+					</tr>
+					<!-- <tr>
+						<td><label for="inViviendasHasta"> Hasta: </label></td>
+						<td><input type="number" id="inViviendasHasta" min="10" max="50000" value="200" onchange="buscar()" oninput="buscar()"></td>
+					</tr> -->
+				</table>          
+			</fieldset>
+			
+			<fieldset>
+				<legend>Fecha de Publicación:</legend>
+				<table>
+					<tr>
+						<td><label for="inFechaDesde"> Desde: </label></td>
+						<td><input type="date" id="inFechaDesde" class="button" onchange="buscar()"></td>
+					</tr>
+					<!-- <tr>
+						<td><label for="inFechaHasta"> Hasta: </label></td>
+						<td><input type="date" id="inFechaHasta" class="button" onchange="buscar()"></td>
+					</tr> -->
+				</table>  
+			</fieldset>
+
+			<fieldset>
+				<legend>Estado Oportunidad:</legend>
+				<input type="checkbox" id="Pendiente" name="Pendiente" value="Pendiente" checked onchange="buscar()">
+				<label for="Pendiente" class="resalta pendiente"> Pendiente</label><br>
+				<input type="checkbox" id="Ganada" name="Ganada" value="Ganada" checked onchange="buscar()">
+				<label for="Ganada" class="resalta ganada"> Ganada</label><br>
+				<input type="checkbox" id="Perdida" name="Perdida" value="Perdida" checked onchange="buscar()">
+				<label for="Perdida" class="resalta perdida"> Perdida</label><br>
+				<input type="checkbox" id="Novedad" name="Novedad" value="Novedad" checked onchange="buscar()">
+				<label for="Novedad" class="resalta novedad"> Novedad</label><br>
+			</fieldset>
+
+
+			<p id="resumen">Publicadas despues de: </p>
+		</div>
+
+		<script src="main.js"></script>
+		<script src="obrasespana.js"></script> <!--Aquí tengo la variable obras con todas las obras-->
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMxzzTlixQkUg66ECvdCcY7vvtyi8ehW8&region=ES&callback=initMap&v=weekly"></script>
+
+		<footer>
+			<script type="text/javascript">
+				document.write(version)
+			</script>
+		</footer>
+
+	</body>
+
+</html>

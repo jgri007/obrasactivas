@@ -1,0 +1,124 @@
+#map {
+  height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Calibri;
+}
+
+* {
+  font-family: Helvetica, sans-serif;
+  font-size: 11pt;
+  color: #353636;
+}
+
+th,
+td {
+  font-family: ‘Lato’, sans-serif;
+  font-size: x-small;
+}
+
+/* Style the legend */
+.legend {
+  position: absolute;
+  top: 0;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.5em 1em;
+  margin: 60px 10px;
+  font-size: small;
+  line-height: 1.5;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px #888888;
+}
+
+.resalta {
+  color: white;
+  padding: 1px 5px;
+  font-weight: 500;
+  background-color: grey;
+  border-radius: 4px;
+}
+
+.ganada {
+  background-color: #1ABC9C;
+}
+
+.perdida {
+  background-color: #EC7063;
+}
+
+.pendiente {
+  background-color: #2E86C1;
+}
+
+.novedad {
+  background-color: #8d0ce4;
+}
+
+
+.myButton {
+  box-shadow: inset 0px 1px 3px 0px #91b8b3;
+  background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+  background-color: #768d87;
+  border-radius: 5px;
+  border: 1px solid #566963;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 3px 10px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #2b665e;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+  background-color: #6c7c7c;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+input {
+  text-align: left;
+  border: 1px solid #79b2e6;
+  color: darkblue;
+  height: 25px;
+  border-radius: 4px;
+  margin: 2px;
+}
+
+input[type=text] {
+  width: 140px;
+}
+
+input[type=number] {
+  text-align: right;
+  width: 110px;
+}
+
+input[type=date] {
+  text-align: center;
+  width: 110px;
+}
+
+input[type=checkbox] { 
+  vertical-align: middle; 
+  position: relative; 
+  bottom: 1px; 
+} 
+
+fieldset {
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  margin: 2px;
+  vertical-align: middle;
+}
+
+#resumen {
+  text-align: center;
+  color: darkred;
+}
