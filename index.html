@@ -64,7 +64,9 @@
 
 		<script src="main.js"></script>
 		<script src="obrasespana.js"></script> <!--Aquí tengo la variable obras con todas las obras-->
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMxzzTlixQkUg66ECvdCcY7vvtyi8ehW8&region=ES&callback=initMap&v=weekly"></script>
+
+		<script> const apiKey = process.env.GOOGLE_API_KEY; </script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=${apiKey}&region=ES&callback=initMap&v=weekly"></script>
 
 		<footer>
 			<script type="text/javascript">
@@ -75,3 +77,4 @@
 	</body>
 
 </html>
+
